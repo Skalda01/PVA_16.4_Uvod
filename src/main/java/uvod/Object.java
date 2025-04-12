@@ -28,7 +28,6 @@ public class Object {
         this.width = width;
         this.height = height;
         this.isAlive = true;
-        printWidthplusHeight();
     }
 
     /*
