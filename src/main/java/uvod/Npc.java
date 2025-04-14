@@ -1,6 +1,6 @@
 package uvod;
 
-public class Npc extends Object {
+public class Npc extends Entita {
 
     private String name;
     private int health;
@@ -34,8 +34,8 @@ public class Npc extends Object {
     * Tímto způsobem se zobrazí všechny atributy třídy Npc.
     */
     @Override
-    public void printObject() {
-        super.printObject();
+    public void printEntita() {
+        super.printEntita();
         System.out.println("Name: " + name);
         System.out.println("Health: " + health);
         System.out.println("Damage: " + damage);
@@ -58,7 +58,7 @@ public class Npc extends Object {
         System.out.println("Y: " + getY());
     }   
 
-    public void printCoordinates(Object obj) {
+    public void printCoordinates(Entita obj) {
         /*
          * Vytiskne souřadnice objektu.
          */

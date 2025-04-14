@@ -71,7 +71,7 @@ public class TestUvod {
 
     @Test
     public void testReturnArrayListObject() {
-        ArrayList<uvod.Object> result = testClass.TestReturnArrayListObject();
+        ArrayList<uvod.Entita> result = testClass.TestReturnArrayListObject();
         assertEquals(4, result.size());
     }
 

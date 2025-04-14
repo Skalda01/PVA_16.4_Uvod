@@ -7,8 +7,8 @@ public class Main {
         * Vytvoření objektu:
         * [Název třídy] [názevProměnné] = new [Název třídy]([parametry]);
         */
-        Object objekt = new Object(5, 10, 15, 20);
-        Object objekt2 = new Object(20, 20, 20, 20);
+        Entita entita1 = new Entita(5, 10, 15, 20);
+        Entita entita2 = new Entita(20, 20, 20, 20);
         Npc npc = new Npc(30, 30, 30, 30, "John", 100, 10, true);
 
 
@@ -16,15 +16,15 @@ public class Main {
         * Výpis vzdálenosti mezi objektem a objektem2.
         * Díky dědičnosti může metodu distanceToX použít i objekt npc (i v případě, že metoda není definovaná ve třídě Npc).
         */
-        System.out.println(objekt.distanceToObject(npc));   
-        System.out.println(npc.distanceToObject(objekt));
+        System.out.println(entita1.distanceToEntita(npc));   
+        System.out.println(npc.distanceToEntita(entita1));
 
 
-        přesunObjekt(objekt);
+        resetPosition(entita1);
         System.out.println(isAlive(npc));
 
-        objekt.printObject();
-        npc.printObject();
+        entita1.printEntita();
+        npc.printEntita();
 
     }
 
@@ -37,15 +37,15 @@ public class Main {
     */
 
 
-    public static void přesunObjekt(Object objekt) {
+    public static void resetPosition(Entita objekt) {
         objekt.setX(0);
         objekt.setY(0);
-        System.out.println("Objekt byl přesunut na souřadnice: " + objekt.getX() + ", " + objekt.getY());
+        System.out.println("Entita byla resetována na souřadnice: " + objekt.getX() + ", " + objekt.getY());
     }
 
-    public static boolean isAlive(Object objekt) {
+    public static boolean isAlive(Entita objekt) {
         return objekt.isAlive();
-    }
+    }   
 
   
 }

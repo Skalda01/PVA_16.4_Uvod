@@ -1,6 +1,6 @@
 package test;
 
-import uvod.Object;
+import uvod.Entita;
 import uvod.Npc;
 import uvod.Enemy;
 import uvod.Player;
@@ -10,7 +10,7 @@ import java.util.Comparator;
 
 public class TestClass {
 
-    private Object objekt1, objekt2;
+    private Entita entita1, entita2;
     private Npc npc;
     private Player player;
     private ArrayList<Enemy> enemy_List;
@@ -22,8 +22,8 @@ public class TestClass {
     */
     public TestClass() {
         // Vytvoření objektů
-        objekt1 = new Object(5, 10, 15, 20);
-        objekt2 = new Object(20, 20, 20, 20);
+        entita1 = new Entita(5, 10, 15, 20);
+        entita2 = new Entita(20, 20, 20, 20);
 
         // Vytvoření NPC
         npc = new Npc(30, 30, 30, 30, "John", 100, 10, true);
@@ -60,7 +60,7 @@ public class TestClass {
     // Vrátí vzdálenost mezi objektem 1 a objektem 2.
     public int TestDistanceToObject() {
 
-        int result = objekt1.distanceToObject(objekt2);
+        int result = entita1.distanceToEntita(entita2);
         return result;
     }
 
@@ -70,10 +70,10 @@ public class TestClass {
     // Nastaví isAlive na false pro objekt 1.
     // Vrátí hodnotu isAlive pro objekt 1.
     public boolean TestIsAlive() {
-        objekt1.setIsAlive(false);
+        entita1.setIsAlive(false);
 
 
-        boolean result = objekt1.isAlive();
+        boolean result = entita1.isAlive();
         return result;
     }
 
@@ -163,13 +163,13 @@ public class TestClass {
     // Test 9
     // Testovací metoda vloží všechny potomky třídy Object do ArrayList<>.
     // Vrátí ArrayList<> (ArrayList založte v testovací metodě).
-    public ArrayList<Object> TestReturnArrayListObject() {
-        ArrayList<Object> result = new ArrayList<>();
+    public ArrayList<Entita> TestReturnArrayListObject() {
+        ArrayList<Entita> result = new ArrayList<>();
         
         result.add(player);
         result.add(npc);
-        result.add(objekt1);
-        result.add(objekt2);
+        result.add(entita1);
+        result.add(entita2);
         return result;
     }
 
@@ -195,7 +195,7 @@ public class TestClass {
         enemy_List.forEach(enemy -> System.out.println(enemy.getName()));
 
         // Využití foreach pro výpis vzdálenosti enemy od hráče
-        enemy_List.forEach(enemy -> System.out.println(enemy.distanceToObject(player)));
+        enemy_List.forEach(enemy -> System.out.println(enemy.distanceToEntita(player)));
 
         // Využití foreach pro výpis názvů enemy, které mají stejné souřadnice jako hráč
         enemy_List.forEach(enemy -> {
@@ -205,17 +205,17 @@ public class TestClass {
         });
 
         // Seřazení enemy podle vzdálenosti od hráče
-        enemy_List.sort(Comparator.comparing(enemy -> enemy.distanceToObject(player)));
+        enemy_List.sort(Comparator.comparing(enemy -> enemy.distanceToEntita(player)));
 
     }
 
    
 
 
-    public Object getObjekt1() { return objekt1; }
-    public Object getObjekt2() { return objekt2; }
-    public void setObjekt1(Object objekt1) { this.objekt1 = objekt1; }
-    public void setObjekt2(Object objekt2) { this.objekt2 = objekt2; }
+    public Entita getEntita1() { return entita1; }
+    public Entita getEntita2() { return entita2; }
+    public void setEntita1(Entita entita1) { this.entita1 = entita1; }
+    public void setEntita2(Entita entita2) { this.entita2 = entita2; }
     public Npc getNpc() { return npc; }
     public Player getPlayer() { return player; }
     public ArrayList<Enemy> getEnemyList() { return enemy_List; }
