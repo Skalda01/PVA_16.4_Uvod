@@ -18,10 +18,10 @@ public class TestClass {
 
     /*
     * Konstruktor třídy TestClass.
-    * Vytváří objekty NPC, Player, ArrayList a Enemy.
+    * Vytváří entita1, entita2, NPC, Player, ArrayList a Enemy.
     */
     public TestClass() {
-        // Vytvoření objektů
+        // Vytvoření entit
         entita1 = new Entita(5, 10, 15, 20);
         entita2 = new Entita(20, 20, 20, 20);
 
@@ -50,14 +50,14 @@ public class TestClass {
     *
     * 1) Neměňte návratovou hodnotu metody.
     * 2) Neměňte název metody.
-    * 3) Neupravujte žádné hodnoty atributů objektů v public testClass().
+    * 3) Neupravujte žádné hodnoty v public testClass().
     * 4) Všechny potřebné věci jsou v public testClass().
     */
 
 
     // Test 1
-    // Testovací metoda pro výpočet vzdálenosti mezi objekty.
-    // Vrátí vzdálenost mezi objektem 1 a objektem 2.
+    // Testovací metoda pro výpočet vzdálenosti mezi entitami.
+    // Vrátí vzdálenost mezi entitou 1 a entitou 2.
     public int TestDistanceToObject() {
 
         int result = entita1.distanceToEntita(entita2);
@@ -66,9 +66,9 @@ public class TestClass {
 
 
     // Test 2
-    // Testovací metoda pro ověření isAlive u objektu 1.
-    // Nastaví isAlive na false pro objekt 1.
-    // Vrátí hodnotu isAlive pro objekt 1.
+    // Testovací metoda pro ověření isAlive u entity 1.
+    // Nastaví isAlive na false pro entitu 1.
+    // Vrátí hodnotu isAlive pro entitu 1.
     public boolean TestIsAlive() {
         entita1.setIsAlive(false);
 
@@ -127,7 +127,7 @@ public class TestClass {
 
     // Test 7
     // Testovací metoda pro zjištění, zda player a nějaký enemy mají stejné souřadnice x, y.
-    // Vytvořte novou metodu v třídě Object pro zjištění, zda jsou souřadnice stejné (návratová hodnota: boolean).
+    // Vytvořte novou metodu v třídě Entita pro zjištění, zda jsou souřadnice stejné (návratová hodnota: boolean).
     // Vrátí enemy, který má stejné souřadnice x, y.
     public Enemy TestSameCoordinates() {
         Enemy enemy_result = null;
@@ -161,7 +161,7 @@ public class TestClass {
 
 
     // Test 9
-    // Testovací metoda vloží všechny potomky třídy Object do ArrayList<>.
+    // Testovací metoda vloží všechny potomky třídy Entita do ArrayList<>.
     // Vrátí ArrayList<> (ArrayList založte v testovací metodě).
     public ArrayList<Entita> TestReturnArrayListObject() {
         ArrayList<Entita> result = new ArrayList<>();
