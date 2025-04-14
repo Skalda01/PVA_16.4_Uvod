@@ -1,2 +1,3 @@
-# PVA_16.4
-![java img](https://github.com/user-attachments/assets/fe02bf59-a359-46a1-8b89-def0aa39c730)
+# DĚDIČNOSST
+Koncept dědičnosti
+Dědičnost je velmi užitečný a silný koncept objektově orientovaného programování. V Javě můžeme pomocí dědičnosti využívat existující vlastnosti jedné třídy v jiné třídě. Dědičnost přináší velkou výhodu zvanou znovupoužitelnost kódu (code re-usability). Díky této vlastnosti není nutné opakovaně psát často používaný kód v aplikaci – můžeme ho jednoduše znovu využít.
