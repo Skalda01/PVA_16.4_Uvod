@@ -56,7 +56,7 @@ public class TestClass {
 
 
     // Test 1
-    // Testovací metoda pro výpočet vzdálenosti mezi entitami.
+    // Testovací metoda pro výpočet vzdálenosti.
     // Vrátí vzdálenost mezi entitou 1 a entitou 2.
     public int TestDistanceToObject() {
         return 0;
