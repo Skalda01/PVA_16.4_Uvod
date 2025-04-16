@@ -74,13 +74,6 @@ public class Entita {
     }
 
 
-    // Metoda pro test 7 (bude odebrána).
-    // Vytvořte novou metodu v třídě Object pro zjištění, zda jsou souřadnice x a y stejné (návratová hodnota: boolean).
-    public boolean sameCoordinates(Entita obj) {
-        return x == obj.getX() && y == obj.getY();
-    }
-
-
     
 
     /*
