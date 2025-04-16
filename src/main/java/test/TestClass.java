@@ -59,9 +59,7 @@ public class TestClass {
     // Testovací metoda pro výpočet vzdálenosti mezi entitami.
     // Vrátí vzdálenost mezi entitou 1 a entitou 2.
     public int TestDistanceToObject() {
-
-        int result = entita1.distanceToEntita(entita2);
-        return result;
+        return 0;
     }
 
 
@@ -70,11 +68,7 @@ public class TestClass {
     // Nastaví isAlive na false pro entitu 1.
     // Vrátí hodnotu isAlive pro entitu 1.
     public boolean TestIsAlive() {
-        entita1.setIsAlive(false);
-
-
-        boolean result = entita1.isAlive();
-        return result;
+        return true;
     }
 
 
@@ -82,8 +76,7 @@ public class TestClass {
     // Testovací metoda pro ověření velikosti enemy_List.
     // Vrátí velikost enemy_List.
     public int TestEnemyListSize() {
-        int result = enemy_List.size();
-        return result;
+        return 0;
     }
 
 
@@ -91,10 +84,7 @@ public class TestClass {
     // Testovací metoda pro získání elementu z enemy_List na indexu 2, poté změníme isAlive na false.
     // Vrátí hodnotu isAlive pro element z enemy_List na indexu 2.
     public boolean TestEnemyListElement() {
-        Enemy enemy = enemy_List.get(2);
-        enemy.setIsAlive(false);
-        boolean result = enemy.isAlive();
-        return result;
+        return true;
     }
 
 
@@ -102,9 +92,7 @@ public class TestClass {
     // Testovací metoda pro přidání enemy do enemy_List s názvem Enemy_F.
     // Vrátí přidaného enemy.
     public Enemy TestAddEnemy() {
-        enemy_List.add(new Enemy(50, 50, 50, 50, "Enemy_F", 100, 10, true));
-        Enemy enemy = enemy_List.get(5);
-        return enemy;
+        return null;
     }
 
 
@@ -112,16 +100,7 @@ public class TestClass {
     // Testovací metoda pro vymazání enemy z enemy_List s názvem Enemy_C (nepoužívejte index, použijte jméno jako parametr k odstranění).
     // Vrátí odstraněného enemy.
     public Enemy TestRemoveEnemy() {
-
-        Enemy enemy_result = null;
-        for (Enemy enemy : enemy_List) {
-            if (enemy.getName().equals("Enemy_C")) {
-                enemy_result = enemy;
-            }
-        }
-
-        enemy_List.remove(enemy_result);
-        return enemy_result;
+        return null;
     }
 
 
@@ -130,14 +109,7 @@ public class TestClass {
     // Vytvořte novou metodu v třídě Entita pro zjištění, zda jsou souřadnice stejné (návratová hodnota: boolean).
     // Vrátí enemy, který má stejné souřadnice x, y.
     public Enemy TestSameCoordinates() {
-        Enemy enemy_result = null;
-
-        for (Enemy enemy : enemy_List) {
-            if (player.sameCoordinates(enemy)) {
-                enemy_result = enemy;
-            }
-        }
-        return enemy_result;
+        return null;
     }
 
 
@@ -145,18 +117,7 @@ public class TestClass {
     // Testovací metoda pro odstranění enemy z enemy_List, pokud dojde k kolizi mezi playerem a enemy na souřadnicích x, y.
     // Vrátí enemy_list po odstranění enemy.
     public ArrayList<Enemy> TestRemoveEnemyCollision() {
-
-        
-        /*
-         *  for (Enemy enemy : enemy_List) {
-            if (player.sameCoordinates(enemy)) {
-                enemy_List.remove(enemy);
-            }
-            }
-         */
-
-        enemy_List.removeIf(enemy -> player.sameCoordinates(enemy));
-        return enemy_List;
+        return null;
     }
 
 
@@ -164,13 +125,7 @@ public class TestClass {
     // Testovací metoda vloží všechny potomky třídy Entita do ArrayList<>.
     // Vrátí ArrayList<> (ArrayList založte v testovací metodě).
     public ArrayList<Entita> TestReturnArrayListObject() {
-        ArrayList<Entita> result = new ArrayList<>();
-        
-        result.add(player);
-        result.add(npc);
-        result.add(entita1);
-        result.add(entita2);
-        return result;
+        return null;
     }
 
 
