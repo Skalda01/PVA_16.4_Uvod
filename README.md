@@ -49,7 +49,7 @@ V tomto případě metoda soucet() vrací hodnotu typu int, což znamená, že m
 
 Tato struktura je klíčová pro efektivní využívání objektově orientovaného programování a pro zajištění přehlednosti a údržby kódu.
 
-## Příklad
+
 
 ### Třída Entita
 Třída Entita reprezentuje základní objekt s prostorovými vlastnostmi, jako je pozice a rozměry. Obsahuje atributy x, y, width, height a boolean isAlive, který určuje, zda je entita naživu. Třída má metodu printEntita(), která vypisuje informace o entitě, a metodu distanceToEntita(), která počítá vzdálenost mezi dvěma entitami na základě jejich středu. Metoda printXplusY() vrací součet hodnot x a y a poskytuje jednoduchou aritmetickou funkci pro entitu.
